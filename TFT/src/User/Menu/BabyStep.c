@@ -58,11 +58,11 @@ static float baby_step_value=0.0;
 
 void showBabyStep(void)
 {
-  GUI_DispFloat(CENTER_X - 3*BYTE_WIDTH/2, CENTER_Y, baby_step_value, 1, 2, 1, RIGHT);
+  GUI_DispFloat(CENTER_X - 3*BYTE_WIDTH/2, CENTER_Y, baby_step_value, 1, 2, RIGHT);
 }
 void babyStepReDraw(void)
 {
-  GUI_DispFloat(CENTER_X - 3*BYTE_WIDTH/2, CENTER_Y, baby_step_value, 1, 2, 1, RIGHT);
+  GUI_DispFloat(CENTER_X - 3*BYTE_WIDTH/2, CENTER_Y, baby_step_value, 1, 2, RIGHT);
 }
 
 
@@ -72,7 +72,7 @@ void menuBabyStep(void)
   float now = baby_step_value;
 
   initElements(KEY_ICON_5);
-  menuDrawPage(&babyStepItems);
+  menuDrawPage(&babyStepItems,false);
   showBabyStep();
 
   while(infoMenu.menu[infoMenu.cur] == menuBabyStep)
